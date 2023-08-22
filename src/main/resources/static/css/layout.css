@@ -1,0 +1,16 @@
+.prsm-pr {
+	margin-bottom: 1em
+}
+.prsm-pr-fields dt, .prsm-pr-fields dd {
+	margin: 0;
+}
+.fld-what, .fld-how, .fld-who, .fld-when, .fld-overseen {
+	display: inline;
+}
+.prsm-pr-field-value.fld-comments {
+	margin-bottom: 1em;
+}
+.prsm-pr-field-value::after {
+	content: " "; 
+	display: block
+}

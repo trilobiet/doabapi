@@ -1,0 +1,17 @@
+<ehcache>
+
+	<diskStore path="java.io.tmpdir/ehcache/doab/api"/>
+	
+	<defaultCache 
+		maxElementsInMemory="2000"
+		eternal="false"
+		overflowToDisk="false"
+		timeToLiveSeconds="3600" />
+
+	<cache name="prismCache"
+		maxElementsInMemory="2000"
+		eternal="false"
+		timeToLiveSeconds="7200"
+		overflowToDisk="false"/>
+
+</ehcache>
