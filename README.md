@@ -3,9 +3,10 @@
 Use this JSON API or widget on your web pages to show peer review process information for publishers and titles.
 
 
-## Request format
+## Response format JSON or HTML
 
-The JSON API provides requested data in JSON format. This JSON data can be further processed for display in any client application or web site.      
+The JSON API provides requested data in JSON format. This JSON data can be further processed for display in any client application or web site.
+      
 Alternatively one can choose to request a fully formatted and styled HTML widget.
 
 
@@ -24,12 +25,12 @@ examples:
     
 #### By name
         
-    https://localhost:8080/prism/[rest|html]/publisher?name=[name]
+    https://api.doabooks.org/prism/[rest|html]/publisher?name=[name]
     
 examples:
     
-    https://localhost:8080/prism/rest/publisher?name=Facultad de Ciencias Jurídicas y Políticas - Universidad Nacional del Altiplano de Puno
-    https://localhost:8080/prism/html/publisher?name=Facultad de Ciencias Jurídicas y Políticas - Universidad Nacional del Altiplano de Puno
+    https://api.doabooks.org/prism/rest/publisher?name=Facultad de Ciencias Jurídicas y Políticas - Universidad Nacional del Altiplano de Puno
+    https://api.doabooks.org/prism/html/publisher?name=Facultad de Ciencias Jurídicas y Políticas - Universidad Nacional del Altiplano de Puno
     
     
 ### JSON Response for publisher
@@ -187,12 +188,12 @@ examples:
     
 #### By isbn
         
-    https://localhost:8080/prism/[rest|html]/title?isbn=[isbn]
+    https://api.doabooks.org/prism/[rest|html]/title?isbn=[isbn]
     
 examples:
     
-    https://localhost:8080/prism/rest/title?isbn=9780472036165
-    https://localhost:8080/prism/html/title?isbn=9780472036165
+    https://api.doabooks.org/prism/rest/title?isbn=9780472036165
+    https://api.doabooks.org/prism/html/title?isbn=9780472036165
     
     
 ### JSON Response for title
