@@ -10,10 +10,10 @@
 		<version>2.7.12</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>org.doabooks</groupId>
-	<artifactId>api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>api</name>
+	<groupId>org.doabooks.api</groupId>
+	<artifactId>prismwidget</artifactId>
+	<version>1.0.1</version>
+	<name>prismwidget</name>
 	<description>API for Doabooks</description>
 	
 	<properties>
@@ -64,6 +64,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<executable>true</executable>
+				</configuration>		
 			</plugin>
 
 		</plugins>

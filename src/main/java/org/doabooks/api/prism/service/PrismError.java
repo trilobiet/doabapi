@@ -1,4 +1,4 @@
-package org.doabooks.api.prisma.service;
+package org.doabooks.api.prism.service;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,4 +1,4 @@
-package org.doabooks.api.prisma.controller;
+package org.doabooks.api.prism.controller;
 
 public class BadRequestException extends RuntimeException {
 	

@@ -1,11 +1,11 @@
 # Prism widget for Directory of Open Access Books (DOAB)
 
-Use this JSON API or widget on your web pages to show peer review process information for publishers and titles.
+Use this widget on your web pages to show peer review process information for publishers and titles.
 
 
 ## Response format JSON or HTML
 
-The JSON API provides requested data in JSON format. This JSON data can be further processed for display in any client application or web site.
+The JSON Widget API provides requested data in JSON format. This JSON data can be further processed for display in any client application or web site.
       
 Alternatively one can choose to request a fully formatted and styled HTML widget.
 
@@ -16,24 +16,34 @@ Requests for publisher peer review data can be done using one of two request par
 
 #### By id
 
-    https://api.doabooks.org/prism/[rest|html]/publisher?id=[id]
+    https://widget.doabooks.org/prism/[rest|html]/publisher?id=[id]
 
 examples:
     
-    https://api.doabooks.org/prism/rest/publisher?id=1139
-    https://api.doabooks.org/prism/html/publisher?id=1139    
+```
+    https://widget.doabooks.org/prism/rest/publisher?id=1139
+```
+```    
+    https://widget.doabooks.org/prism/html/publisher?id=1139    
+```
     
 #### By name
         
-    https://api.doabooks.org/prism/[rest|html]/publisher?name=[name]
+    https://widget.doabooks.org/prism/[rest|html]/publisher?name=[name]
     
 examples:
+
+```    
+    https://widget.doabooks.org/prism/rest/publisher?name=Facultad de Ciencias Jurídicas y Políticas - Universidad Nacional del Altiplano de Puno
+```
+```    
+    https://widget.doabooks.org/prism/html/publisher?name=Facultad de Ciencias Jurídicas y Políticas - Universidad Nacional del Altiplano de Puno
+```
     
-    https://api.doabooks.org/prism/rest/publisher?name=Facultad de Ciencias Jurídicas y Políticas - Universidad Nacional del Altiplano de Puno
-    https://api.doabooks.org/prism/html/publisher?name=Facultad de Ciencias Jurídicas y Políticas - Universidad Nacional del Altiplano de Puno
     
-    
-### JSON Response for publisher
+### Response for publisher
+
+#### JSON Response
 
 JSON responses for publisher typically have the following form (example):
 
@@ -67,8 +77,7 @@ JSON responses for publisher typically have the following form (example):
 	}
 
 
-#### HTML Response for publisher
-
+### HTML Response
 
 
 	<div class="prsm">
@@ -179,24 +188,34 @@ Requests for title peer review data can be done using one of two request paramet
 
 #### By doi
 
-    https://api.doabooks.org/prism/[rest|html]/title?doi=[doi]
+    https://widget.doabooks.org/prism/[rest|html]/title?doi=[doi]
 
 examples:
     
-    https://api.doabooks.org/prism/rest/title?doi=10.3998/tfcp.13240726.0001.001
-    https://api.doabooks.org/prism/html/title?doi=10.3998/tfcp.13240726.0001.001    
+```
+    https://widget.doabooks.org/prism/rest/title?doi=10.3998/tfcp.13240726.0001.001
+```
+```    
+    https://widget.doabooks.org/prism/html/title?doi=10.3998/tfcp.13240726.0001.001    
+```    
     
 #### By isbn
         
-    https://api.doabooks.org/prism/[rest|html]/title?isbn=[isbn]
+    https://widget.doabooks.org/prism/[rest|html]/title?isbn=[isbn]
     
 examples:
     
-    https://api.doabooks.org/prism/rest/title?isbn=9780472036165
-    https://api.doabooks.org/prism/html/title?isbn=9780472036165
+```
+    https://widget.doabooks.org/prism/rest/title?isbn=9780472036165
+```
+```
+    https://widget.doabooks.org/prism/html/title?isbn=9780472036165
+```    
     
     
-### JSON Response for title
+### Response for title
+
+#### JSON Response
 
 JSON responses for title typically have the following form (example):
     
@@ -230,8 +249,7 @@ JSON responses for title typically have the following form (example):
 	}
 
 
-### HTML Response for title
-
+#### HTML Response
 
 	<div class="prsm">
 	

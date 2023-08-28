@@ -1,11 +1,11 @@
-package org.doabooks.api.prisma.controller;
+package org.doabooks.api.prism.controller;
 
 import java.io.IOException;
 
-import org.doabooks.api.prisma.service.PrismBook;
-import org.doabooks.api.prisma.service.PrismError;
-import org.doabooks.api.prisma.service.PrismPublisher;
-import org.doabooks.api.prisma.service.PrismService;
+import org.doabooks.api.prism.service.PrismBook;
+import org.doabooks.api.prism.service.PrismError;
+import org.doabooks.api.prism.service.PrismPublisher;
+import org.doabooks.api.prism.service.PrismService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

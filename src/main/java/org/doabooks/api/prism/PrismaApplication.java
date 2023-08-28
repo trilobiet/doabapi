@@ -1,4 +1,4 @@
-package org.doabooks.api.prisma;
+package org.doabooks.api.prism;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

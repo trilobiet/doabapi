@@ -1,4 +1,4 @@
-package org.doabooks.api.prisma.config;
+package org.doabooks.api.prism.config;
 
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Configuration;

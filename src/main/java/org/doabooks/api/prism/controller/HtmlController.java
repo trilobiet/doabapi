@@ -1,10 +1,10 @@
-package org.doabooks.api.prisma.controller;
+package org.doabooks.api.prism.controller;
 
 import java.io.IOException;
 
-import org.doabooks.api.prisma.service.PrismError;
-import org.doabooks.api.prisma.service.PrismPublisher;
-import org.doabooks.api.prisma.service.PrismService;
+import org.doabooks.api.prism.service.PrismError;
+import org.doabooks.api.prism.service.PrismPublisher;
+import org.doabooks.api.prism.service.PrismService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -39,7 +39,7 @@ public class HtmlController {
 		else 
 			throw new BadRequestException("Missing argument: name OR id");
 		
-		return new ModelAndView("api/prismwidget/publisher")
+		return new ModelAndView("prismwidget/publisher")
 			.addObject("prismResponse", prismResponse);
 	}
 
@@ -59,7 +59,7 @@ public class HtmlController {
 		else 
 			throw new BadRequestException("Missing argument: doi OR isbn");
 		
-		return new ModelAndView("api/prismwidget/title")
+		return new ModelAndView("prismwidget/title")
 			.addObject("prismResponse", prismResponse);
 	}
 	
@@ -70,7 +70,7 @@ public class HtmlController {
 		
 		PrismError error = new PrismError(404, "Resource not found");
 		
-		return new ModelAndView("api/prismwidget/error").addObject(error);
+		return new ModelAndView("prismwidget/error").addObject(error);
 	}
 	
 	
@@ -80,7 +80,7 @@ public class HtmlController {
 		
 		PrismError error = new PrismError(400, exception.getMessage());
 		
-		return new ModelAndView("api/prismwidget/error").addObject(error);
+		return new ModelAndView("prismwidget/error").addObject(error);
 	}	
 
 	@ExceptionHandler(IOException.class)
@@ -89,7 +89,7 @@ public class HtmlController {
 		
 		PrismError error = new PrismError(500, "No data could be retrieved (" + exception.getMessage() + ")");
 		
-		return new ModelAndView("api/prismwidget/error").addObject(error);
+		return new ModelAndView("prismwidget/error").addObject(error);
 	}	
 	
 	

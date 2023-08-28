@@ -1,6 +1,6 @@
-package org.doabooks.api.prisma.controller;
+package org.doabooks.api.prism.controller;
 
-import org.doabooks.api.prisma.service.PrismError;
+import org.doabooks.api.prism.service.PrismError;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -30,7 +30,7 @@ public class HomeController {
 		
 		PrismError error = new PrismError(404, "Resource not found");
 		
-		return new ModelAndView("api/prismwidget/error").addObject(error);
+		return new ModelAndView("prismwidget/error").addObject(error);
 	}
 
 }

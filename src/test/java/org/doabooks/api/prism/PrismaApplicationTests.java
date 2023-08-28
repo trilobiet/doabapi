@@ -1,4 +1,4 @@
-package org.doabooks.prisma;
+package org.doabooks.api.prism;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,6 +1,6 @@
-package org.doabooks.api.prisma.config;
+package org.doabooks.api.prism.config;
 
-import org.doabooks.api.prisma.service.PrismService;
+import org.doabooks.api.prism.service.PrismService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
