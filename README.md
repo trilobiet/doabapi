@@ -2,6 +2,17 @@
 
 Use this widget on your web pages to show peer review process information for publishers and titles.
 
+-----
+
+#### Table of Contents
+* [Response format JSON or HTML](#response-format-json-or-html)
+* [Publisher data](#publisher-data)   
+* [Title Data](#title-data)  
+* [Widget implementation in HTML](widget-implementation-in-html)
+
+
+-----
+
 
 ## Response format JSON or HTML
 
@@ -9,6 +20,8 @@ The JSON Widget API provides requested data in JSON format. This JSON data can b
       
 Alternatively one can choose to request a fully formatted and styled HTML widget.
 
+
+## Publisher data
 
 ### Request for publisher
 
@@ -39,7 +52,6 @@ examples:
 ```    
     https://widget.doabooks.org/prism/html/publisher?name=Facultad de Ciencias Jurídicas y Políticas - Universidad Nacional del Altiplano de Puno
 ```
-    
     
 ### Response for publisher
 
@@ -78,7 +90,6 @@ JSON responses for publisher typically have the following form (example):
 
 
 ### HTML Response
-
 
 	<div class="prsm">
 	
@@ -182,6 +193,8 @@ JSON responses for publisher typically have the following form (example):
 	</div>
 
 
+## Title Data
+
 ### Request for title
 
 Requests for title peer review data can be done using one of two request parameters {doi,isbn} 
@@ -211,7 +224,6 @@ examples:
 ```
     https://widget.doabooks.org/prism/html/title?isbn=9780472036165
 ```    
-    
     
 ### Response for title
 
@@ -301,4 +313,9 @@ JSON responses for title typically have the following form (example):
     
 	</div>
         
+
+## Widget implementation in HTML
+
+### TODO
+
     
