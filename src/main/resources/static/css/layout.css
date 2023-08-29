@@ -1,16 +1,21 @@
-.prsm-pr {
+.prism-widget {
+	margin: 1em;
+	padding: 1em;
+	border: solid 1px #ccc;
+}
+.prism-pr {
 	margin-bottom: 1em
 }
-.prsm-pr-fields dt, .prsm-pr-fields dd {
+.prism-pr-fields dt, .prism-pr-fields dd {
 	margin: 0;
 }
 .fld-what, .fld-how, .fld-who, .fld-when, .fld-overseen {
 	display: inline;
 }
-.prsm-pr-field-value.fld-comments {
+.prism-pr-field-value.fld-comments {
 	margin-bottom: 1em;
 }
-.prsm-pr-field-value::after {
+.prism-pr-field-value::after {
 	content: " "; 
 	display: block
 }

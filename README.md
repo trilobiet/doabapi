@@ -8,8 +8,7 @@ Use this widget on your web pages to show peer review process information for pu
 * [Response format JSON or HTML](#response-format-json-or-html)
 * [Publisher data](#publisher-data)   
 * [Title Data](#title-data)  
-* [Widget implementation in HTML](widget-implementation-in-html)
-
+* [Widget implementation in HTML](#widget-implementation-in-html)
 
 -----
 

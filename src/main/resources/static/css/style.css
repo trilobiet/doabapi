@@ -1,4 +1,0 @@
-.prsm-pr-field {font-weight: bold}
-.prsm-pr-field:not(.fld-comments)::after {content: ": "}
-.prsm-pr-field-desc {color: #999;}
-

@@ -6,64 +6,69 @@
 		<th:block th:if="${prismResponse.error == null}" th:text="${'for ' + prismResponse.book.title}"></th:block>
 	</title>
 	<link rel="stylesheet" href="/resources/css/layout.css"></link>
-	<link rel="stylesheet" href="/resources/css/style.css"></link>
+	<link rel="stylesheet" href="/resources/css/typeface.css"></link>
 </head>
 <body>
+
+	<div class="prism-wrapper">
 	
-	<div th:if="${prismResponse.error != null}" class="prsm">
-		<h1 th:text="${prismResponse.code}"></h1>
-		<p th:text="${prismResponse.error}">error message</p>
-	</div>
-	
-	<div th:if="${prismResponse.error == null}" class="prsm">
-	
-		<h1 class="prsm-hdr">
-			<span class="prsm-hdr-text">Peer Review Information</span> 
-			<span class="prsm-hdr-for">for</span>
-			<span class="prsm-hdr-title" th:text="${prismResponse.book.title}">A Book Title</span>
-		</h1>
-	
-		<h2 class="prsm-hdr-sub">
-			The publisher has registered with DOAB Prism the Peer Review Process for
-			<span th:text="${prismResponse.numberOfReviews}">1</span> 
-			Peer Review type<th:block th:if="${prismResponse.numberOfReviews} != 1">s</th:block>:
-		</h2> 	
+		<div th:if="${prismResponse.error != null}" class="prism">
+			<h1 th:text="${prismResponse.code}"></h1>
+			<p th:text="${prismResponse.error}">error message</p>
+		</div>
 		
-		<ol class="prsm-prs">
+		<div th:if="${prismResponse.error == null}" class="prism">
 		
-			<li th:each="pr: ${prismResponse.peerReviews}" class="prsm-pr">
+			<h1 class="prism-hdr">
+				<span class="prism-hdr-text">Peer Review Information</span> 
+				<span class="prism-hdr-for">for</span>
+				<span class="prism-hdr-type">title</span>
+				<span class="prism-hdr-title" th:text="${prismResponse.book.title}">A Book Title</span>
+			</h1>
+		
+			<h2 class="prism-hdr-sub">
+				The publisher has registered with DOAB Prism the Peer Review Process for
+				<span th:text="${prismResponse.numberOfReviews}">1</span> 
+				Peer Review type<th:block th:if="${prismResponse.numberOfReviews} != 1">s</th:block>:
+			</h2> 	
 			
-				<dl class="prsm-pr-fields">
+			<ol class="prism-prs">
+			
+				<li th:each="pr: ${prismResponse.peerReviews}" class="prism-pr">
 				
-					<dt class="prsm-pr-field fld-comments" th:if="${pr.review!=null}">Review Comments</dt>
-					<dd class="prsm-pr-field-value fld-comments" th:if="${pr.review!=null}" th:text="${pr.review}">Full text</dd>
-				
-					<dt class="prsm-pr-field fld-what">What</dt>
-					<dt class="prsm-pr-field-desc fld-what">What is being reviewed?</dt> 
-					<dd class="prsm-pr-field-value fld-what" th:text="${pr.object}">Full text</dd>
-
-					<dt class="prsm-pr-field fld-who">Who</dt> 
-					<dt class="prsm-pr-field-desc fld-who">Who conducts the peer review?</dt> 
-					<dd class="prsm-pr-field-value fld-who" th:text="${#strings.replace(pr.conductedBy,';','; ')}">Editorial board member; External peer reviewer</dd>
-
-					<dt class="prsm-pr-field fld-how">How</dt>
-					<dt class="prsm-pr-field-desc fld-how">What is the level of anonymity?</dt> 
-					<dd class="prsm-pr-field-value fld-how" th:text="${pr.type}">Single-blind</dd>
-
-					<dt class="prsm-pr-field fld-when">When</dt>
-					<dt class="prsm-pr-field-desc fld-when">At what stage is the peer review being conducted?</dt> 
-					<dd class="prsm-pr-field-value fld-when" th:text="${pr.stage}">Pre-publication</dd>
-
-					<dt class="prsm-pr-field-desc fld-overseen">Peer review is overseen by:</dt>
-					<dd class="prsm-pr-field-value fld-overseen" th:text="${pr.overseenBy}">Scientific or Editorial Board</dd>
+					<dl class="prism-pr-fields">
 					
-				</dl>
-				
-			</li>
+						<dt class="prism-pr-field fld-comments" th:if="${pr.review!=null}">Review Comments</dt>
+						<dd class="prism-pr-field-value fld-comments" th:if="${pr.review!=null}" th:text="${pr.review}">Full text</dd>
+					
+						<dt class="prism-pr-field fld-what">What</dt>
+						<dt class="prism-pr-field-desc fld-what">What is being reviewed?</dt> 
+						<dd class="prism-pr-field-value fld-what" th:text="${pr.object}">Full text</dd>
+	
+						<dt class="prism-pr-field fld-who">Who</dt> 
+						<dt class="prism-pr-field-desc fld-who">Who conducts the peer review?</dt> 
+						<dd class="prism-pr-field-value fld-who" th:text="${#strings.replace(pr.conductedBy,';','; ')}">Editorial board member; External peer reviewer</dd>
+	
+						<dt class="prism-pr-field fld-how">How</dt>
+						<dt class="prism-pr-field-desc fld-how">What is the level of anonymity?</dt> 
+						<dd class="prism-pr-field-value fld-how" th:text="${pr.type}">Single-blind</dd>
+	
+						<dt class="prism-pr-field fld-when">When</dt>
+						<dt class="prism-pr-field-desc fld-when">At what stage is the peer review being conducted?</dt> 
+						<dd class="prism-pr-field-value fld-when" th:text="${pr.stage}">Pre-publication</dd>
+	
+						<dt class="prism-pr-field-desc fld-overseen">Peer review is overseen by:</dt>
+						<dd class="prism-pr-field-value fld-overseen" th:text="${pr.overseenBy}">Scientific or Editorial Board</dd>
+						
+					</dl>
+					
+				</li>
+			
+			</ol>
+	
+		</div>
 		
-		</ol>
-
-	</div>
+	</div>	
 
 </body>
 </html>
