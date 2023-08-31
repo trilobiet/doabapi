@@ -4,11 +4,16 @@ Use this widget on your web pages to show peer review process information for pu
 
 -----
 
+TODO : screen preview pics
+
 #### Table of Contents
 * [Response format JSON or HTML](#response-format-json-or-html)
 * [Publisher data](#publisher-data)   
 * [Title Data](#title-data)   
 * [Widget implementation in HTML](#widget-implementation-in-html)    
+* [Function reference for prism-widget.js](#function-reference-for-prism-widgetjs)
+
+If you just want to implement the widget a.s.a.p., skip to [Widget implementation in HTML](#widget-implementation-in-html).    
 
 -----
 
@@ -94,98 +99,98 @@ JSON responses for publisher typically have the following form (example):
 ### HTML Response
 
 ```html
-<div class="prsm">
+<div class="prism">
 
-   <h1 class="prsm-hdr">
-      <span class="prsm-hdr-text">Peer Review Information</span> 
-      <span class="prsm-hdr-for">for</span>
-      <span class="prsm-hdr-publisher">University of Michigan Press</span>
+   <h1 class="prism-hdr">
+      <span class="prism-hdr-text">Peer Review Information</span> 
+      <span class="prism-hdr-for">for</span>
+      <span class="prism-hdr-publisher">University of Michigan Press</span>
    </h1>
 
-   <h2 class="prsm-hdr-sub">
+   <h2 class="prism-hdr-sub">
       The publisher has registered with DOAB Prism the Peer Review Process for
       <span>3</span> 
       Peer Review types:
    </h2>    
    
-   <ol class="prsm-prs">
+   <ol class="prism-prs">
    
-      <li class="prsm-pr">
+      <li class="prism-pr">
       
-         <dl class="prsm-pr-fields">
+         <dl class="prism-pr-fields">
          
-            <dt class="prsm-pr-field fld-what">What</dt>
-            <dt class="prsm-pr-field-desc fld-what">What is being reviewed?</dt> 
-            <dd class="prsm-pr-field-value fld-what">Full text</dd>
+            <dt class="prism-pr-field fld-what">What</dt>
+            <dt class="prism-pr-field-desc fld-what">What is being reviewed?</dt> 
+            <dd class="prism-pr-field-value fld-what">Full text</dd>
 
-            <dt class="prsm-pr-field fld-who">Who</dt> 
-            <dt class="prsm-pr-field-desc fld-who">Who conducts the peer review?</dt> 
-            <dd class="prsm-pr-field-value fld-who">External peer reviewer</dd>
+            <dt class="prism-pr-field fld-who">Who</dt> 
+            <dt class="prism-pr-field-desc fld-who">Who conducts the peer review?</dt> 
+            <dd class="prism-pr-field-value fld-who">External peer reviewer</dd>
 
-            <dt class="prsm-pr-field fld-how">How</dt>
-            <dt class="prsm-pr-field-desc fld-how">What is the level of anonymity?</dt> 
-            <dd class="prsm-pr-field-value fld-how">Double-blind</dd>
+            <dt class="prism-pr-field fld-how">How</dt>
+            <dt class="prism-pr-field-desc fld-how">What is the level of anonymity?</dt> 
+            <dd class="prism-pr-field-value fld-how">Double-blind</dd>
 
-            <dt class="prsm-pr-field fld-when">When</dt>
-            <dt class="prsm-pr-field-desc fld-when">At what stage is the peer review being conducted?</dt> 
-            <dd class="prsm-pr-field-value fld-when">Pre-publication</dd>
+            <dt class="prism-pr-field fld-when">When</dt>
+            <dt class="prism-pr-field-desc fld-when">At what stage is the peer review being conducted?</dt> 
+            <dd class="prism-pr-field-value fld-when">Pre-publication</dd>
 
-            <dt class="prsm-pr-field-desc fld-overseen">Peer review is overseen by:</dt>
-            <dd class="prsm-pr-field-value fld-overseen">Scientific or Editorial Board</dd>
+            <dt class="prism-pr-field-desc fld-overseen">Peer review is overseen by:</dt>
+            <dd class="prism-pr-field-value fld-overseen">Scientific or Editorial Board</dd>
             
          </dl>
          
       </li>
    
-      <li class="prsm-pr">
+      <li class="prism-pr">
       
-         <dl class="prsm-pr-fields">
+         <dl class="prism-pr-fields">
          
-            <dt class="prsm-pr-field fld-what">What</dt>
-            <dt class="prsm-pr-field-desc fld-what">What is being reviewed?</dt> 
-            <dd class="prsm-pr-field-value fld-what">Proposal</dd>
+            <dt class="prism-pr-field fld-what">What</dt>
+            <dt class="prism-pr-field-desc fld-what">What is being reviewed?</dt> 
+            <dd class="prism-pr-field-value fld-what">Proposal</dd>
 
-            <dt class="prsm-pr-field fld-who">Who</dt> 
-            <dt class="prsm-pr-field-desc fld-who">Who conducts the peer review?</dt> 
-            <dd class="prsm-pr-field-value fld-who">External peer reviewer</dd>
+            <dt class="prism-pr-field fld-who">Who</dt> 
+            <dt class="prism-pr-field-desc fld-who">Who conducts the peer review?</dt> 
+            <dd class="prism-pr-field-value fld-who">External peer reviewer</dd>
  
-            <dt class="prsm-pr-field fld-how">How</dt>
-            <dt class="prsm-pr-field-desc fld-how">What is the level of anonymity?</dt> 
-            <dd class="prsm-pr-field-value fld-how">Double-blind</dd>
+            <dt class="prism-pr-field fld-how">How</dt>
+            <dt class="prism-pr-field-desc fld-how">What is the level of anonymity?</dt> 
+            <dd class="prism-pr-field-value fld-how">Double-blind</dd>
 
-            <dt class="prsm-pr-field fld-when">When</dt>
-            <dt class="prsm-pr-field-desc fld-when">At what stage is the peer review being conducted?</dt> 
-            <dd class="prsm-pr-field-value fld-when">Pre-publication</dd>
+            <dt class="prism-pr-field fld-when">When</dt>
+            <dt class="prism-pr-field-desc fld-when">At what stage is the peer review being conducted?</dt> 
+            <dd class="prism-pr-field-value fld-when">Pre-publication</dd>
 
-            <dt class="prsm-pr-field-desc fld-overseen">Peer review is overseen by:</dt>
-            <dd class="prsm-pr-field-value fld-overseen">Publisher</dd>
+            <dt class="prism-pr-field-desc fld-overseen">Peer review is overseen by:</dt>
+            <dd class="prism-pr-field-value fld-overseen">Publisher</dd>
             
          </dl>
          
       </li>
    
-      <li class="prsm-pr">
+      <li class="prism-pr">
       
-         <dl class="prsm-pr-fields">
+         <dl class="prism-pr-fields">
          
-            <dt class="prsm-pr-field fld-what">What</dt>
-            <dt class="prsm-pr-field-desc fld-what">What is being reviewed?</dt> 
-            <dd class="prsm-pr-field-value fld-what">Proposal</dd>
+            <dt class="prism-pr-field fld-what">What</dt>
+            <dt class="prism-pr-field-desc fld-what">What is being reviewed?</dt> 
+            <dd class="prism-pr-field-value fld-what">Proposal</dd>
 
-            <dt class="prsm-pr-field fld-who">Who</dt> 
-            <dt class="prsm-pr-field-desc fld-who">Who conducts the peer review?</dt> 
-            <dd class="prsm-pr-field-value fld-who">Internal editor</dd>
+            <dt class="prism-pr-field fld-who">Who</dt> 
+            <dt class="prism-pr-field-desc fld-who">Who conducts the peer review?</dt> 
+            <dd class="prism-pr-field-value fld-who">Internal editor</dd>
 
-            <dt class="prsm-pr-field fld-how">How</dt>
-            <dt class="prsm-pr-field-desc fld-how">What is the level of anonymity?</dt> 
-            <dd class="prsm-pr-field-value fld-how">All identities known</dd>
+            <dt class="prism-pr-field fld-how">How</dt>
+            <dt class="prism-pr-field-desc fld-how">What is the level of anonymity?</dt> 
+            <dd class="prism-pr-field-value fld-how">All identities known</dd>
 
-            <dt class="prsm-pr-field fld-when">When</dt>
-            <dt class="prsm-pr-field-desc fld-when">At what stage is the peer review being conducted?</dt> 
-            <dd class="prsm-pr-field-value fld-when">Pre-publication</dd>
+            <dt class="prism-pr-field fld-when">When</dt>
+            <dt class="prism-pr-field-desc fld-when">At what stage is the peer review being conducted?</dt> 
+            <dd class="prism-pr-field-value fld-when">Pre-publication</dd>
 
-            <dt class="prsm-pr-field-desc fld-overseen">Peer review is overseen by:</dt>
-            <dd class="prsm-pr-field-value fld-overseen">Books or series editor</dd>
+            <dt class="prism-pr-field-desc fld-overseen">Peer review is overseen by:</dt>
+            <dd class="prism-pr-field-value fld-overseen">Books or series editor</dd>
             
          </dl>
          
@@ -272,47 +277,47 @@ JSON responses for title typically have the following form (example):
 #### HTML Response
 
 ```html
-<div class="prsm">
+<div class="prism">
 
-   <h1 class="prsm-hdr">
-      <span class="prsm-hdr-text">Peer Review Information</span> 
-      <span class="prsm-hdr-for">for</span>
-      <span class="prsm-hdr-title">A Heart Beating Hard</span>
+   <h1 class="prism-hdr">
+      <span class="prism-hdr-text">Peer Review Information</span> 
+      <span class="prism-hdr-for">for</span>
+      <span class="prism-hdr-title">A Heart Beating Hard</span>
    </h1>
 
-   <h2 class="prsm-hdr-sub">
+   <h2 class="prism-hdr-sub">
       The publisher has registered with DOAB Prism the Peer Review Process for
       <span>1</span> 
       Peer Review type:
    </h2>    
    
-   <ol class="prsm-prs">
+   <ol class="prism-prs">
    
-      <li class="prsm-pr">
+      <li class="prism-pr">
       
-         <dl class="prsm-pr-fields">
+         <dl class="prism-pr-fields">
          
-            <dt class="prsm-pr-field fld-comments">Review Comments</dt>
-            <dd class="prsm-pr-field-value fld-comments">The proposal was selected by the acquisitions editor who invited a full manuscript. The full manuscript was reviewed by two external readers using a double-blind process. Based on the acquisitions editor recommendation, the external reviews, and their own analysis, the Executive Committee (Editorial Board) of U-M Press approved the project for publication.</dd>
+            <dt class="prism-pr-field fld-comments">Review Comments</dt>
+            <dd class="prism-pr-field-value fld-comments">The proposal was selected by the acquisitions editor who invited a full manuscript. The full manuscript was reviewed by two external readers using a double-blind process. Based on the acquisitions editor recommendation, the external reviews, and their own analysis, the Executive Committee (Editorial Board) of U-M Press approved the project for publication.</dd>
          
-            <dt class="prsm-pr-field fld-what">What</dt>
-            <dt class="prsm-pr-field-desc fld-what">What is being reviewed?</dt> 
-            <dd class="prsm-pr-field-value fld-what">Full text</dd>
+            <dt class="prism-pr-field fld-what">What</dt>
+            <dt class="prism-pr-field-desc fld-what">What is being reviewed?</dt> 
+            <dd class="prism-pr-field-value fld-what">Full text</dd>
 
-            <dt class="prsm-pr-field fld-who">Who</dt> 
-            <dt class="prsm-pr-field-desc fld-who">Who conducts the peer review?</dt> 
-            <dd class="prsm-pr-field-value fld-who">External peer reviewer</dd>
+            <dt class="prism-pr-field fld-who">Who</dt> 
+            <dt class="prism-pr-field-desc fld-who">Who conducts the peer review?</dt> 
+            <dd class="prism-pr-field-value fld-who">External peer reviewer</dd>
 
-            <dt class="prsm-pr-field fld-how">How</dt>
-            <dt class="prsm-pr-field-desc fld-how">What is the level of anonymity?</dt> 
-            <dd class="prsm-pr-field-value fld-how">Double-anonymised</dd>
+            <dt class="prism-pr-field fld-how">How</dt>
+            <dt class="prism-pr-field-desc fld-how">What is the level of anonymity?</dt> 
+            <dd class="prism-pr-field-value fld-how">Double-anonymised</dd>
 
-            <dt class="prsm-pr-field fld-when">When</dt>
-            <dt class="prsm-pr-field-desc fld-when">At what stage is the peer review being conducted?</dt> 
-            <dd class="prsm-pr-field-value fld-when">Pre-publication</dd>
+            <dt class="prism-pr-field fld-when">When</dt>
+            <dt class="prism-pr-field-desc fld-when">At what stage is the peer review being conducted?</dt> 
+            <dd class="prism-pr-field-value fld-when">Pre-publication</dd>
 
-            <dt class="prsm-pr-field-desc fld-overseen">Peer review is overseen by:</dt>
-            <dd class="prsm-pr-field-value fld-overseen">Scientific or Editorial Board</dd>
+            <dt class="prism-pr-field-desc fld-overseen">Peer review is overseen by:</dt>
+            <dd class="prism-pr-field-value fld-overseen">Scientific or Editorial Board</dd>
             
          </dl>
          
@@ -326,9 +331,9 @@ JSON responses for title typically have the following form (example):
 
 ## Widget implementation in HTML
 
-Using the REST API `https://widget.doabooks.org/prism/rest/...` JSON data can be requested to display PRISM data in your web sites' content in any way you want, applying any layout and styling of your own making.
+Using the REST API at `https://widget.doabooks.org/prism/rest/` JSON data can be requested to display PRISM data in your web sites' content in any way you want, applying any layout and styling of your own making.
 
-To keep things a bit more simple though, a script is available that renders HTML output `https://widget.doabooks.org/prism/html/...` in your web sites' DOM using a standardized layout. Three ways of including the widget are described here.
+To keep things a bit simpler though, a script is available that renders HTML output from `https://widget.doabooks.org/prism/html/...` in your web sites' DOM using a standardized layout. Three ways of including the widget are described here.
 
 
 ### 1: PRISM data in a modal popup
@@ -343,13 +348,13 @@ A modal popup shows the requested PRISM data in an overlay window after the site
    <script src="https://widget.doabooks.org/resources/js/prism-widget.js"></script>
    ```
 
-3. Create one or more elements with an onClick event:
+3. Create one or more elements with an onClick event. These elements can then be clicked to open a modal popup:
     
    ```html
    <button onclick="prismPublisher({id:'1139',modal:true})">PRISM Peer Review Information</button>
    ```
     
-   For an overview of available functions and their arguments, see below. 
+   For an overview of available functions and their arguments, see below at [Function reference for prism-widget.js](#function-reference-for-prism-widgetjs). 
 
 
 ### 2: PRISM data as inline loaded HTML
@@ -387,12 +392,12 @@ Inline loaded HTML directly shows the requested PRISM data in the web page, with
 
    ```javascript
    <script>
-      prismTitle({ isbn:'9780472036165', modal:false, selector:'#p1139' })    
-      prismTitle({ isbn:'9780472036165', modal:false, selector:'#p1140' })
+      prismTitle({ isbn:'9780123456789', modal:false, selector:'#p1139' })    
+      prismTitle({ isbn:'9780123456789', modal:false, selector:'#p1140' })
    </script>
    ```
     
-   For an overview of available functions and their arguments, see below. 
+   For an overview of available functions and their arguments, see below at [Function reference for prism-widget.js](#function-reference-for-prism-widgetjs). 
 
 
 ### 3: PRISM data in an iframe
@@ -412,10 +417,10 @@ Request and show PRISM data for a publisher.
 
 ```javascript
 function prismPublisher({
-   name : "",     
-   id : "",       
-   selector : "", 
-   modal : true    
+   name     = "",     
+   id       = "",       
+   selector = ".prism-widget", 
+   modal    = true    
 })
 ```
 
@@ -427,24 +432,24 @@ function prismPublisher({
 | modal        | Boolean |   yes    |       true      |
 
 \* One of `name` and `id` must be present. When both are present, `id` is ignored. When none is present `id` is set "".   
-\** Argument `selector` is ignored when `modal` is `true`.
+\** `selector` is ignored when `modal` is `true`.
 
 #### Example usage
 
 ```javascript
 prismPublisher({
-   id:   "1139"
+   id: "1139"
 });
 ````
 Peer Review data for publisher with id `1139` is rendered as a modal popup (default behaviour). An HTML element is needed to open the modal popup, e.g.:
 
 ```html
-<button onclick="prismPublisher({ id:'1139' })" style="color:blue">Prism Peer Review Information</button>
+<button onclick="prismPublisher({ id:'1139' })">Prism Peer Review Information</button>
 ```
 
 ```javascript
 prismPublisher({
-   id:   "1139"
+   id:    "1139",
    modal: false
 });
 ````
@@ -452,8 +457,8 @@ Peer Review data for publisher with id `1139` is rendered inline in elements wit
 
 ```javascript
 prismPublisher({
-   id:       "1139"
-   selector: "#mySelector"
+   id:       "1139",
+   selector: "#mySelector",
    modal:    false
 });
 ````
@@ -466,10 +471,10 @@ Request and show PRISM data for a title.
 
 ```javascript
 function prismTitle({
-   doi,
-   isbn,
-   selector,
-   modal
+   doi      = "",
+   isbn     = "",
+   selector = ".prism-widget",
+   modal    = true 
 })
 ```
 
@@ -481,37 +486,37 @@ function prismTitle({
 | modal        | Boolean |   yes    |       true      |
 
 \* One of `doi` and `isbn` must be present. When both are present, `isbn` is ignored. When none is present `isbn` is set "".   
-\** Argument `selector` is ignored when `modal` is `true`.
+\** `selector` is ignored when `modal` is `true`.
  
 #### Example usage
 
 ```javascript
 prismTitle({
-   isbn:     "1234567890"
+   isbn: "9780123456789"
 });
 ````
-Peer Review data for title with isbn `1234567890` is rendered as a modal popup (default behaviour). An HTML element is needed to open the modal popup, e.g.:
+Peer Review data for title with isbn `9780123456789` is rendered as a modal popup (default behaviour). An HTML element is needed to open the modal popup, e.g.:
 
 ```html
-<button onclick="prismTitle({ isbn:'1139' })" style="color:blue">Prism Peer Review Information</button>
+<button onclick="prismTitle({ isbn:'9780123456789' })">Prism Peer Review Information</button>
 ```
 
 ```javascript
 prismTitle({
-   doi:   "abc/123/456/"
+   doi:   "10.1000/abcd.2000.1234",
    modal: false
 });
 ````
-Peer Review data for title with doi `abc/123/456/` is rendered inline in elements with class `prism-widget` (default value) 
+Peer Review data for title with doi `10.1000/abcd.2000.1234` is rendered inline in elements with class `prism-widget` (default value) 
 
 ```javascript
 prismTitle({
-   isbn:     "1234567890"
-   selector: "#mySelector"
+   isbn:     "9780123456789",
+   selector: "#mySelector",
    modal:    false
 });
 ````
-Peer Review data for title with isbn `1234567890` is rendered inline in the element with id `mySelector` 
+Peer Review data for title with isbn `9780123456789` is rendered inline in the element with id `mySelector` 
 
 
     

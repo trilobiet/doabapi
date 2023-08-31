@@ -37,7 +37,7 @@ function _cssLink(file) {
 function prismPublisher({
 	name = "",
 	id = "0",
-	selector='.prism-widget',
+	selector ='.prism-widget',
 	modal = true,
 }) {
 	
@@ -49,7 +49,7 @@ function prismPublisher({
 function prismTitle({
 	doi = "",
 	isbn = "0",
-	selector='.prism-widget',
+	selector ='.prism-widget',
 	modal = true,
 }) {
 	
