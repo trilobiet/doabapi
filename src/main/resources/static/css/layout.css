@@ -4,18 +4,36 @@
 	border: solid 1px #ccc;
 }
 .prism-pr {
-	margin-bottom: 1em
+	margin-bottom: 2em;
 }
-.prism-pr-fields dt, .prism-pr-fields dd {
+
+.prism-pr-field.fld-what,
+.prism-pr-field.fld-how,
+.prism-pr-field.fld-who,
+.prism-pr-field.fld-when {
+	width: 4rem;
+	float: left;	
+}
+
+.prism-pr-field.fld-overseen {
+	float: left;	
+}
+
+.prism-pr-field:not(.fld-comments)::after {
+	content: ":\00a0"
+}
+
+.prism-pr-field-value {
 	margin: 0;
 }
-.fld-what, .fld-how, .fld-who, .fld-when, .fld-overseen {
-	display: inline;
+
+.prism-pr-field-desc {
+	margin: 0 0 1em 4rem;
 }
+
 .prism-pr-field-value.fld-comments {
 	margin-bottom: 1em;
 }
 .prism-pr-field-value::after {
-	content: " "; 
 	display: block
 }

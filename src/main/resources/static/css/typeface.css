@@ -4,6 +4,5 @@
 .prism-hdr-publisher, .prism-hdr-title {display:block;font-weight:normal;font-size:2em;line-height:1.7;border-bottom:solid 1px #aaa;padding-bottom:.5em;margin-bottom:.5em;}
 .prism-hdr-sub {font-weight:normal;font-size:1em;}
 .prism-pr-field {font-weight: bold}
-.prism-pr-field:not(.fld-comments)::after {content: ": "}
-.prism-pr-field-desc {color: #999;}
+.prism-pr-field-desc {color: #999;font-size:90%;}
 

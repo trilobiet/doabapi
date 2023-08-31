@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	var html = `
 	  <div>
 	    <span class="prism-modal-close" onclick=\"prismHideModal()\">&times;</span>
-	    <iframe id="prism-iframe" src="" frameborder="0" width="100%" height="400px"></iframe> 
+	    <iframe id="prism-iframe" src="https://widget.doabooks.org/resources/img/loader.gif" frameborder="0" width="100%" height="400px"></iframe> 
 	  </div>
 	`;
 	
@@ -75,7 +75,7 @@ function prismShowModal(url) {
 function prismHideModal() {
 	
 	if (document.getElementById('prism-modal')) {
-		document.getElementById("prism-iframe").src = "about:blank";
+		document.getElementById("prism-iframe").src = "https://widget.doabooks.org/resources/img/loader.gif";
 		document.getElementById("prism-modal").style.display = 'none';
 	}	
 }
