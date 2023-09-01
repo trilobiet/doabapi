@@ -4,7 +4,9 @@ Use this widget on your web pages to show peer review process information for pu
 
 -----
 
-TODO : screen preview pics
+### TLDR
+
+If you just want to implement the widget on your website, head over to [Widget implementation in HTML](#widget-implementation-in-html).    
 
 #### Table of Contents
 * [Response format JSON or HTML](#response-format-json-or-html)
@@ -13,7 +15,6 @@ TODO : screen preview pics
 * [Widget implementation in HTML](#widget-implementation-in-html)    
 * [Function reference for prism-widget.js](#function-reference-for-prism-widgetjs)
 
-If you just want to implement the widget a.s.a.p., skip to [Widget implementation in HTML](#widget-implementation-in-html).    
 
 -----
 
@@ -342,9 +343,9 @@ A modal popup shows the requested PRISM data in an overlay window after the site
 
 <p align="center">
   <img width="400" height="auto" alt="PRISM modal widget"
-        src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-modal-01.png">
+     src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-modal-01.png">
   <img width="400" height="auto" alt="PRISM modal widget revealed"
-        src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-modal-02.png">
+     src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-modal-02.png">
 </p>
 
 
@@ -359,7 +360,9 @@ A modal popup shows the requested PRISM data in an overlay window after the site
 3. Create one or more elements with an onClick event. These elements can then be clicked to open a modal popup:
     
    ```html
-   <button onclick="prismPublisher({id:'1139',modal:true})">PRISM Peer Review Information</button>
+   <button onclick="prismPublisher({id:'1139',modal:true})">
+      PRISM Peer Review Information
+   </button>
    ```
     
    For an overview of available functions and their arguments, see below at [Function reference for prism-widget.js](#function-reference-for-prism-widgetjs).
@@ -371,9 +374,9 @@ The example images below show a page with multiple buttons for modal display of 
 
 <p align="center">
   <img width="400" height="auto" alt="PRISM list of modal widgets"
-        src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-modal-list-01.png">
+     src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-modal-list-01.png">
   <img width="400" height="auto" alt="PRISM list of modal widgets, modal revealed"
-        src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-modal-list-02.png">
+     src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-modal-list-02.png">
 </p>
 
 
@@ -383,7 +386,7 @@ Inline loaded HTML directly shows the requested PRISM data in the web page, with
 
 <p align="center">
   <img width="500" height="auto" alt="PRISM widget in an iframe"
-        src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-inline-01.png">
+     src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-inline-01.png">
 </p>
 
 #### Steps to follow for installation:
@@ -431,7 +434,7 @@ In the example image below the regions are populated inline, but have default st
 
 <p align="center">
   <img width="500" height="auto" alt="PRISM list of widgets inline"
-        src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-inline-list-01.png">
+     src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-inline-list-01.png">
 </p>
 
 
@@ -440,13 +443,14 @@ In the example image below the regions are populated inline, but have default st
 Ultimately you can choose to statically include an iframe on your web page, with its `src` attribute set to the appropriate url.
 
 ```html
-<iframe src="https://widget.doabooks.org/prism/html/publisher?id=1139" width="100%" height="600"></iframe>
+<iframe src="https://widget.doabooks.org/prism/html/publisher?id=1139" 
+   width="100%" height="600"></iframe>
 ```
 Of course there is always the possibility to hide and show the iframe in a modal or popup window using any custom javascript or javascript framework of your own choice.
 
 <p align="center">
   <img width="500" height="auto" alt="PRISM widget in an iframe"
-        src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-iframe-01.png">
+     src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-iframe-01.png">
 </p>
 
 ## Function reference for prism-widget.js 
@@ -486,7 +490,9 @@ prismPublisher({
 Peer Review data for publisher with id `1139` is rendered as a modal popup (default behaviour). An HTML element is needed to open the modal popup, e.g.:
 
 ```html
-<button onclick="prismPublisher({ id:'1139' })">Prism Peer Review Information</button>
+<button onclick="prismPublisher({ id:'1139' })">
+   Prism Peer Review Information
+</button>
 ```
 
 ```javascript
@@ -542,7 +548,9 @@ prismTitle({
 Peer Review data for title with isbn `9780123456789` is rendered as a modal popup (default behaviour). An HTML element is needed to open the modal popup, e.g.:
 
 ```html
-<button onclick="prismTitle({ isbn:'9780123456789' })">Prism Peer Review Information</button>
+<button onclick="prismTitle({ isbn:'9780123456789' })">
+   Prism Peer Review Information
+</button>
 ```
 
 ```javascript
