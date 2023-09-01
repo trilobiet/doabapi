@@ -377,7 +377,7 @@ Inline loaded HTML directly shows the requested PRISM data in the web page, with
     <link rel="stylesheet" href="https://widget.doabooks.org/resources/css/typeface.css"></link>    
     ```
 
-2. Create one or more elements that serve as regions for inserted PRISM data:
+2. Create one or more elements that serve as regions for PRISM data to be inserted:
 
    ```html 
    ...   
@@ -388,7 +388,7 @@ Inline loaded HTML directly shows the requested PRISM data in the web page, with
    ...
    ```   
  
-3. Include a script just before the closing `</body>` tag to populate the defined regions:
+3. Include a script just before the closing `</body>` tag to populate the regions defined at step 2:
 
    ```javascript
    <script>
@@ -409,6 +409,10 @@ Ultimately you can choose to statically include an iframe on your web page, with
 ```
 Of course there is always the possibility to hide and show the iframe in a modal or popup window using any custom javascript or javascript framework of your own choice.
 
+<p align="center">
+  <img width="460" height="300" src="https://picsum.photos/460/300">
+</p>
+
 ## Function reference for prism-widget.js 
 
 ### Function `prismPublisher`
@@ -424,15 +428,17 @@ function prismPublisher({
 })
 ```
 
-| parameter    |  type   | optional |  default value  |
-| ------------ | ------- | -------- | --------------- |
-| name         | String  |   yes*   |       ""        |
-| id           | String  |   yes*   |       ""        | 
-| selector**   | String  |   yes    | ".prism-widget" |
-| modal        | Boolean |   yes    |       true      |
+| parameter              |  type   | optional            | default value   |
+| ---------------------- | ------- | ------------------- | --------------- |
+| name                   | String  | yes<sup>1</sup>     |       ""        |
+| id                     | String  | yes<sup>1</sup>     |       ""        | 
+| selector<sup>2</sup>   | String  | yes                 | ".prism-widget" |
+| modal                  | Boolean | yes                 |       true      |
 
-\* One of `name` and `id` must be present. When both are present, `id` is ignored. When none is present `id` is set "".   
-\** `selector` is ignored when `modal` is `true`.
+<small>
+  <sup>1</sup> One of `name` and `id` must be present. When both are present, `id` is ignored. When none is present `id` is set "".   
+  <sup>2</sup> `selector` is ignored when `modal` is `true`.
+</small>
 
 #### Example usage
 
@@ -478,15 +484,17 @@ function prismTitle({
 })
 ```
 
-| parameter    |  type   | optional |  default value  |
-| ------------ | ------- | -------- | --------------- |
-| doi          | String  |   yes*   |       ""        |
-| isbn         | String  |   yes*   |       ""        | 
-| selector**   | String  |   yes    | ".prism-widget" |
-| modal        | Boolean |   yes    |       true      |
+| parameter              |  type   | optional            |  default value  |
+| ---------------------- | ------- | ------------------- | --------------- |
+| doi                    | String  | yes<sup>1</sup>     |       ""        |
+| isbn                   | String  | yes<sup>1</sup>     |       ""        | 
+| selector<sup>1</sup>   | String  | yes                 | ".prism-widget" |
+| modal                  | Boolean | yes                 |       true      |
 
-\* One of `doi` and `isbn` must be present. When both are present, `isbn` is ignored. When none is present `isbn` is set "".   
-\** `selector` is ignored when `modal` is `true`.
+<small>
+  <sup>1</sup> One of `doi` and `isbn` must be present. When both are present, `isbn` is ignored. When none is present `isbn` is set "".   
+  <sup>2</sup> `selector` is ignored when `modal` is `true`.
+</small>
  
 #### Example usage
 
