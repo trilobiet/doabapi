@@ -340,6 +340,14 @@ To keep things a bit simpler though, a script is available that renders HTML out
 
 A modal popup shows the requested PRISM data in an overlay window after the site visitor performs some action, like clicking a link, a button or an image. A modal popup does not interfere with your sites' layout, though it requires an action to be initiated by the visitor to show the data. 
 
+<p align="center">
+  <img width="400" height="auto" alt="PRISM modal widget"
+        src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-modal-01.png">
+  <img width="400" height="auto" alt="PRISM modal widget revealed"
+        src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-modal-02.png">
+</p>
+
+
 #### Steps to follow for installation:
 
 1. Copy the prism-widget.js script tag to the HTML head tag just before the closing tag `<\head>`:   
@@ -354,12 +362,29 @@ A modal popup shows the requested PRISM data in an overlay window after the site
    <button onclick="prismPublisher({id:'1139',modal:true})">PRISM Peer Review Information</button>
    ```
     
-   For an overview of available functions and their arguments, see below at [Function reference for prism-widget.js](#function-reference-for-prism-widgetjs). 
+   For an overview of available functions and their arguments, see below at [Function reference for prism-widget.js](#function-reference-for-prism-widgetjs).
+
+
+#### Displaying a list of modal widgets for multiple titles
+
+The example images below show a page with multiple buttons for modal display of PRISM data. Clicking a button toggles the visibility of the appropriate data.
+
+<p align="center">
+  <img width="400" height="auto" alt="PRISM list of modal widgets"
+        src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-modal-list-01.png">
+  <img width="400" height="auto" alt="PRISM list of modal widgets, modal revealed"
+        src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-modal-list-02.png">
+</p>
 
 
 ### 2: PRISM data as inline loaded HTML
 
 Inline loaded HTML directly shows the requested PRISM data in the web page, without the need for any user action. Inline loaded HTML changes the page layout by inserting extra content. Already at the sites' level available CSS styling will be applied to the inserted PRISM content as well. Two extra style sheets can be included to control layout and typeface of the inserted data, which you can choose to override with your own styles, or leave out entirely.
+
+<p align="center">
+  <img width="500" height="auto" alt="PRISM widget in an iframe"
+        src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-inline-01.png">
+</p>
 
 #### Steps to follow for installation:
 
@@ -397,7 +422,17 @@ Inline loaded HTML directly shows the requested PRISM data in the web page, with
    </script>
    ```
     
-   For an overview of available functions and their arguments, see below at [Function reference for prism-widget.js](#function-reference-for-prism-widgetjs). 
+   For an overview of available functions and their arguments, see below at [Function reference for prism-widget.js](#function-reference-for-prism-widgetjs).
+
+
+#### Displaying a list of inline widgets for multiple titles
+
+In the example image below the regions are populated inline, but have default style `display:hidden`. Clicking a button or link toggles visibility.
+
+<p align="center">
+  <img width="500" height="auto" alt="PRISM list of widgets inline"
+        src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-inline-list-01.png">
+</p>
 
 
 ### 3: PRISM data in an iframe
@@ -410,7 +445,8 @@ Ultimately you can choose to statically include an iframe on your web page, with
 Of course there is always the possibility to hide and show the iframe in a modal or popup window using any custom javascript or javascript framework of your own choice.
 
 <p align="center">
-  <img width="460" height="300" src="https://picsum.photos/460/300">
+  <img width="500" height="auto" alt="PRISM widget in an iframe"
+        src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-iframe-01.png">
 </p>
 
 ## Function reference for prism-widget.js 
