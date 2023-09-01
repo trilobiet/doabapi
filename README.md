@@ -1,6 +1,6 @@
 # Prism widget for Directory of Open Access Books (DOAB)
 
-Use this widget on your web pages to show peer review process information for publishers and titles.
+Use this widget on your web pages to show [PRISM Peer Review Information](https://www.doabooks.org/en/article/prism) for publishers and titles.
 
 -----
 
