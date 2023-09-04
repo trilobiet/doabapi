@@ -530,7 +530,7 @@ function prismTitle({
 | ---------------------- | ------- | ------------------- | --------------- |
 | doi                    | String  | yes<sup>1</sup>     |       ""        |
 | isbn                   | String  | yes<sup>1</sup>     |       ""        | 
-| selector<sup>1</sup>   | String  | yes                 | ".prism-widget" |
+| selector<sup>2</sup>   | String  | yes                 | ".prism-widget" |
 | modal                  | Boolean | yes                 |       true      |
 
 <sub><sup>1</sup> One of `doi` and `isbn` must be present. When both are present, `isbn` is ignored. When none is present `isbn` is set to "" (empty string).</sub>    
