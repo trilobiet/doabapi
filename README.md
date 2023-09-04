@@ -30,7 +30,7 @@ Alternatively one can choose to request a fully formatted and styled HTML widget
 
 ### Request for publisher
 
-Requests for publisher peer review data can be done using one of two request parameters {id,name} 
+Requests for publisher peer review data can be done using one of two request parameters {id, name} 
 
 #### By id
 ```
@@ -206,7 +206,7 @@ JSON responses for publisher typically have the following form (example):
 
 ### Request for title
 
-Requests for title peer review data can be done using one of two request parameters {doi,isbn} 
+Requests for title peer review data can be done using one of two request parameters {doi, isbn} 
 
 #### By doi
 
@@ -332,14 +332,14 @@ JSON responses for title typically have the following form (example):
 
 ## Widget implementation in HTML
 
-Using the REST API at `https://widget.doabooks.org/prism/rest/` JSON data can be requested to display PRISM data in your web sites' content in any way you want, applying any layout and styling of your own making.
+Using the REST API at `https://widget.doabooks.org/prism/rest/` JSON data can be requested to display PRISM data in your web site content in any way you want, applying layout and styling of your own making.
 
-To keep things a bit simpler though, a script is available that renders HTML output from `https://widget.doabooks.org/prism/html/...` in your web sites' DOM using a standardized layout. Three ways of including the widget are described here.
+To keep things a bit simpler though, a script is available that renders HTML output from `https://widget.doabooks.org/prism/html/...` in your web site's DOM using a standardized layout. Three ways of including the widget are described here.
 
 
 ### 1: PRISM data in a modal popup
 
-A modal popup shows the requested PRISM data in an overlay window after the site visitor performs some action, like clicking a link, a button or an image. A modal popup does not interfere with your sites' layout, though it requires an action to be initiated by the visitor to show the data. 
+A modal popup shows the requested PRISM data in an overlay window after the site visitor performs some action, like clicking a link, a button or an image. A modal popup does not interfere with your site layout, though for the data to become visible an action to be initiated by the visitor is necessary. 
 
 <p align="center">
   <img width="400" height="auto" alt="PRISM modal widget"
@@ -357,7 +357,7 @@ A modal popup shows the requested PRISM data in an overlay window after the site
    <script src="https://widget.doabooks.org/resources/js/prism-widget.js"></script>
    ```
 
-3. Create one or more elements with an onClick event. These elements can then be clicked to open a modal popup:
+3. Create one or more elements with an onClick event. These elements can then be clicked on to open a modal popup:
     
    ```html
    <button onclick="prismPublisher({id:'1139',modal:true})">
@@ -370,7 +370,7 @@ A modal popup shows the requested PRISM data in an overlay window after the site
 
 #### Displaying a list of modal widgets for multiple titles
 
-The example images below show a page with multiple buttons for modal display of PRISM data. Clicking a button toggles the visibility of the appropriate data.
+The example images below show a page with multiple buttons for modal display of PRISM data. Clicking a button toggles the visibility of the associated data.
 
 <p align="center">
   <img width="400" height="auto" alt="PRISM list of modal widgets"
@@ -382,7 +382,7 @@ The example images below show a page with multiple buttons for modal display of 
 
 ### 2: PRISM data as inline loaded HTML
 
-Inline loaded HTML directly shows the requested PRISM data in the web page, without the need for any user action. Inline loaded HTML changes the page layout by inserting extra content. Already at the sites' level available CSS styling will be applied to the inserted PRISM content as well. Two extra style sheets can be included to control layout and typeface of the inserted data, which you can choose to override with your own styles, or leave out entirely.
+Inline loaded HTML directly shows the requested PRISM data in the web page, without the need for any user action. Inline loaded HTML changes the page layout by inserting extra content. Already at the site level available CSS styling will be applied to the inserted PRISM content as well. Two extra CSS style sheets can be included to control layout and typeface of the inserted data, which you can choose to override with your own styles, or leave out entirely.
 
 <p align="center">
   <img width="500" height="auto" alt="PRISM widget in an iframe"
@@ -397,7 +397,7 @@ Inline loaded HTML directly shows the requested PRISM data in the web page, with
    <script src="https://widget.doabooks.org/resources/js/prism-widget.js"></script>
    ```
 
-1. Copy the layout.css and typeface.css link tags to the HTML head tag:   
+2. Copy the layout.css and typeface.css link tags to the HTML head tag:   
    *This step is optional, you may choose to provide your own CSS styling*
 
     ```html
@@ -405,7 +405,7 @@ Inline loaded HTML directly shows the requested PRISM data in the web page, with
     <link rel="stylesheet" href="https://widget.doabooks.org/resources/css/typeface.css"></link>    
     ```
 
-2. Create one or more elements that serve as regions for PRISM data to be inserted:
+3. Create one or more elements that serve as regions for PRISM data to be inserted:
 
    ```html 
    ...   
@@ -416,7 +416,7 @@ Inline loaded HTML directly shows the requested PRISM data in the web page, with
    ...
    ```   
  
-3. Include a script just before the closing `</body>` tag to populate the regions defined at step 2:
+4. Include a script just before the closing `</body>` tag to populate the regions defined at step 3:
 
    ```javascript
    <script>
@@ -430,7 +430,7 @@ Inline loaded HTML directly shows the requested PRISM data in the web page, with
 
 #### Displaying a list of inline widgets for multiple titles
 
-In the example image below the regions are populated inline, but have default style `display:hidden`. Clicking a button or link toggles visibility.
+In the example image below the regions are populated inline, but have default style `display:hidden`, so they are not shown initially. Clicking a button or link toggles visibility.
 
 <p align="center">
   <img width="500" height="auto" alt="PRISM list of widgets inline"
@@ -440,18 +440,20 @@ In the example image below the regions are populated inline, but have default st
 
 ### 3: PRISM data in an iframe
 
-Ultimately you can choose to statically include an iframe on your web page, with its `src` attribute set to the appropriate url.
+Ultimately you can choose to statically include an `iframe` element on your web page, with its `src` attribute set to the url of the PRISM widget data you want to show. Choosing an iframe eliminates the need for the `prism-widget.js` script, but the iframe size will not adapt to its content unless you provide a script for that, and a scrollbar inside the iframe will become visible when the content height exceeds the iframe height.
 
 ```html
 <iframe src="https://widget.doabooks.org/prism/html/publisher?id=1139" 
    width="100%" height="600"></iframe>
 ```
-Of course there is always the possibility to hide and show the iframe in a modal or popup window using any custom javascript or javascript framework of your own choice.
 
 <p align="center">
   <img width="500" height="auto" alt="PRISM widget in an iframe"
      src="https://raw.githubusercontent.com/trilobiet/prism-widget/main/readme-pix/prism-iframe-01.png">
 </p>
+
+Of course there is always the possibility to hide and show the iframe in a modal or popup window using any custom javascript or javascript framework of your own choice.
+
 
 ## Function reference for prism-widget.js 
 
@@ -475,10 +477,8 @@ function prismPublisher({
 | selector<sup>2</sup>   | String  | yes                 | ".prism-widget" |
 | modal                  | Boolean | yes                 |       true      |
 
-<small>
-  <sup>1</sup> One of `name` and `id` must be present. When both are present, `id` is ignored. When none is present `id` is set "".   
-  <sup>2</sup> `selector` is ignored when `modal` is `true`.
-</small>
+<sub><sup>1</sup> One of `name` and `id` must be present. When both are present, `id` is ignored. When none is present `id` is set to "" (empty string).</sub>    
+<sub><sup>2</sup> `selector` is ignored when `modal` is `true`.</sub>   
 
 #### Example usage
 
@@ -533,10 +533,8 @@ function prismTitle({
 | selector<sup>1</sup>   | String  | yes                 | ".prism-widget" |
 | modal                  | Boolean | yes                 |       true      |
 
-<small>
-  <sup>1</sup> One of `doi` and `isbn` must be present. When both are present, `isbn` is ignored. When none is present `isbn` is set "".   
-  <sup>2</sup> `selector` is ignored when `modal` is `true`.
-</small>
+<sub><sup>1</sup> One of `doi` and `isbn` must be present. When both are present, `isbn` is ignored. When none is present `isbn` is set to "" (empty string).</sub>    
+<sub><sup>2</sup> `selector` is ignored when `modal` is `true`.</sub>   
  
 #### Example usage
 
