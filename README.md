@@ -13,7 +13,7 @@ If you just want to implement the widget on your website, head over to [Widget i
 * [Publisher data](#publisher-data)   
 * [Title Data](#title-data)   
 * [Widget implementation in HTML](#widget-implementation-in-html)    
-* [Function reference for prism-widget.js](#function-reference-for-prism-widgetjs)
+* [Function reference for prism-widget.js](#function-reference-for-prism-widget-js)
 
 
 -----
@@ -365,7 +365,7 @@ A modal popup shows the requested PRISM data in an overlay window after the site
    </button>
    ```
     
-   For an overview of available functions and their arguments, see below at [Function reference for prism-widget.js](#function-reference-for-prism-widgetjs).
+   For an overview of available functions and their arguments, see below at [Function reference for prism-widget.js](#function-reference-for-prism-widget-js).
 
 
 #### Displaying a list of modal widgets for multiple titles
@@ -425,7 +425,7 @@ Inline loaded HTML directly shows the requested PRISM data in the web page, with
    </script>
    ```
     
-   For an overview of available functions and their arguments, see below at [Function reference for prism-widget.js](#function-reference-for-prism-widgetjs).
+   For an overview of available functions and their arguments, see below at [Function reference for prism-widget.js](#function-reference-for-prism-widget-js).
 
 
 #### Displaying a list of inline widgets for multiple titles
