@@ -13,7 +13,7 @@ If you just want to implement the widget on your website, head over to [Widget i
 * [Publisher data](#publisher-data)   
 * [Title Data](#title-data)   
 * [Widget implementation in HTML](#widget-implementation-in-html)    
-* [Function reference for prism-widget.js](#function-reference-for-prism-widget-js)
+* [Function reference for prism-widget.js](#function-reference-for-prism-widgetjs)
 
 
 -----
@@ -39,12 +39,8 @@ https://widget.doabooks.org/prism/[rest|html]/publisher?id=[id]
 
 ##### examples:
     
-```
-https://widget.doabooks.org/prism/rest/publisher?id=1139
-```
-```    
-https://widget.doabooks.org/prism/html/publisher?id=1139
-```
+- https://widget.doabooks.org/prism/rest/publisher?id=1139
+- https://widget.doabooks.org/prism/html/publisher?id=1139
     
 #### By name
 ```        
@@ -53,12 +49,9 @@ https://widget.doabooks.org/prism/[rest|html]/publisher?name=[name]
     
 ##### examples:
 
-```    
-https://widget.doabooks.org/prism/rest/publisher?name=Facultad de Ciencias Jurídicas y Políticas - Universidad Nacional del Altiplano de Puno
-```
-```    
-https://widget.doabooks.org/prism/html/publisher?name=Facultad de Ciencias Jurídicas y Políticas - Universidad Nacional del Altiplano de Puno
-```
+- [https://widget.doabooks.org/prism/rest/publisher?name=Facultad de Ciencias Jurídicas y Políticas - Universidad Nacional del Altiplano de Puno](https://widget.doabooks.org/prism/rest/publisher?name=Facultad%20de%20Ciencias%20Jurídicas%20y%20Políticas%20-%20Universidad%20Nacional%20del%20Altiplano%20de%20Puno)   
+- [https://widget.doabooks.org/prism/html/publisher?name=Facultad de Ciencias Jurídicas y Políticas - Universidad Nacional del Altiplano de Puno](https://widget.doabooks.org/prism/html/publisher?name=Facultad%20de%20Ciencias%20Jurídicas%20y%20Políticas%20-%20Universidad%20Nacional%20del%20Altiplano%20de%20Puno)   
+   
     
 ### Response for publisher
 
@@ -216,12 +209,8 @@ https://widget.doabooks.org/prism/[rest|html]/title?doi=[doi]
 
 ##### examples:
     
-```
-https://widget.doabooks.org/prism/rest/title?doi=10.3998/tfcp.13240726.0001.001
-```
-```    
-https://widget.doabooks.org/prism/html/title?doi=10.3998/tfcp.13240726.0001.001
-```
+- https://widget.doabooks.org/prism/rest/title?doi=10.3998/tfcp.13240726.0001.001
+- https://widget.doabooks.org/prism/html/title?doi=10.3998/tfcp.13240726.0001.001
     
 #### By isbn
 
@@ -231,12 +220,8 @@ https://widget.doabooks.org/prism/[rest|html]/title?isbn=[isbn]
     
 ##### examples:
     
-```
-https://widget.doabooks.org/prism/rest/title?isbn=9780472036165
-```
-```
-https://widget.doabooks.org/prism/html/title?isbn=9780472036165
-```
+- https://widget.doabooks.org/prism/rest/title?isbn=9780472036165
+- https://widget.doabooks.org/prism/html/title?isbn=9780472036165
     
 ### Response for title
 
@@ -365,7 +350,7 @@ A modal popup shows the requested PRISM data in an overlay window after the site
    </button>
    ```
     
-   For an overview of available functions and their arguments, see below at [Function reference for prism-widget.js](#function-reference-for-prism-widget-js).
+   For an overview of available functions and their arguments, see below at [Function reference for prism-widget.js](#function-reference-for-prism-widgetjs).
 
 
 #### Displaying a list of modal widgets for multiple titles
@@ -425,7 +410,7 @@ Inline loaded HTML directly shows the requested PRISM data in the web page, with
    </script>
    ```
     
-   For an overview of available functions and their arguments, see below at [Function reference for prism-widget.js](#function-reference-for-prism-widget-js).
+   For an overview of available functions and their arguments, see below at [Function reference for prism-widget.js](#function-reference-for-prism-widgetjs).
 
 
 #### Displaying a list of inline widgets for multiple titles
