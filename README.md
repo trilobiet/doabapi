@@ -394,10 +394,10 @@ Inline loaded HTML directly shows the requested PRISM data in the web page, with
 
    ```html 
    ...   
-   <div id="p1139"></div>
+   <div id="title1"></div>
    ...   
    ...   
-   <div id="p1140"></div> 
+   <div id="title2"></div> 
    ...
    ```   
  
@@ -405,8 +405,8 @@ Inline loaded HTML directly shows the requested PRISM data in the web page, with
 
    ```javascript
    <script>
-      prismTitle({ isbn:'9780123456789', modal:false, selector:'#p1139' })    
-      prismTitle({ isbn:'9780123456789', modal:false, selector:'#p1140' })
+      prismTitle({ isbn:'9780472036165', modal:false, selector:'#title1' })    
+      prismTitle({ isbn:'9781783748570', modal:false, selector:'#title2' })
    </script>
    ```
     
@@ -525,33 +525,33 @@ function prismTitle({
 
 ```javascript
 prismTitle({
-   isbn: "9780123456789"
+   isbn: "9780472036165"
 });
 ````
-Peer Review data for title with isbn `9780123456789` is rendered as a modal popup (default behaviour). An HTML element is needed to open the modal popup, e.g.:
+Peer Review data for title with isbn `9780472036165` is rendered as a modal popup (default behaviour). An HTML element is needed to open the modal popup, e.g.:
 
 ```html
-<button onclick="prismTitle({ isbn:'9780123456789' })">
+<button onclick="prismTitle({ isbn:'9780472036165' })">
    Prism Peer Review Information
 </button>
 ```
 
 ```javascript
 prismTitle({
-   doi:   "10.1000/abcd.2000.1234",
+   doi:   "10.3998/tfcp.13240726.0001.001",
    modal: false
 });
 ````
-Peer Review data for title with doi `10.1000/abcd.2000.1234` is rendered inline in elements with class `prism-widget` (default value) 
+Peer Review data for title with doi `10.3998/tfcp.13240726.0001.001` is rendered inline in elements with class `prism-widget` (default value) 
 
 ```javascript
 prismTitle({
-   isbn:     "9780123456789",
+   isbn:     "9780472036165",
    selector: "#mySelector",
    modal:    false
 });
 ````
-Peer Review data for title with isbn `9780123456789` is rendered inline in the element with id `mySelector` 
+Peer Review data for title with isbn `9780472036165` is rendered inline in the element with id `mySelector` 
 
 
     
