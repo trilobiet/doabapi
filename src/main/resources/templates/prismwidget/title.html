@@ -5,16 +5,22 @@
 		Prism Peer Review Information
 		<th:block th:if="${prismResponse.error == null}" th:text="${'for ' + prismResponse.book.title}"></th:block>
 	</title>
-	<link rel="stylesheet" href="/resources/css/layout.css"></link>
-	<link rel="stylesheet" href="/resources/css/typeface.css"></link>
+	<link rel="stylesheet" href="/resources/css/layout.css?v=1.02"></link>
+	<link rel="stylesheet" href="/resources/css/typeface.css?v=1.02"></link>
 </head>
 <body>
 
 	<div class="prism-wrapper prism-title">
 	
+		<img src="/resources/img/prism-orange-rgb.png" alt="prism logo" class="prism-logo"/>
+		
 		<div th:if="${prismResponse.error != null}" class="prism">
-			<h1 th:text="${prismResponse.code}"></h1>
-			<p th:text="${prismResponse.error}">error message</p>
+			<h1 class="prism-hdr">
+				<span class="prism-hdr-title" th:text="${prismResponse.code}">999</span>	
+			</h1>
+			<h2 class="prism-hdr-sub" th:text="${prismResponse.error}">
+				Error message
+			</h2>
 		</div>
 		
 		<div th:if="${prismResponse.error == null}" class="prism">

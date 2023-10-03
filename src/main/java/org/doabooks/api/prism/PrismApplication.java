@@ -6,11 +6,11 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
 @SpringBootApplication
-public class PrismaApplication {
+public class PrismApplication {
 
 	public static void main(String[] args) {
 		
-		ConfigurableApplicationContext ctx = SpringApplication.run(PrismaApplication.class, args);
+		ConfigurableApplicationContext ctx = SpringApplication.run(PrismApplication.class, args);
 		
 		DispatcherServlet dispatcherServlet = (DispatcherServlet)ctx.getBean("dispatcherServlet");
         dispatcherServlet.setThrowExceptionIfNoHandlerFound(true); 

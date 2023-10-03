@@ -3,6 +3,9 @@
 	padding: 1em;
 	border: solid 1px #ccc;
 }
+.prism-logo {
+	width: 85px;
+}
 .prism-pr {
 	margin-bottom: 2em;
 }

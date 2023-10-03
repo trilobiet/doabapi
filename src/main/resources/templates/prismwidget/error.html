@@ -5,14 +5,22 @@
 		Prism Peer Review Information -
 		<th:block th:text="${prismError.code}">999</th:block>
 	</title>
+	<link rel="stylesheet" href="/resources/css/layout.css?v=1.02"></link>
+	<link rel="stylesheet" href="/resources/css/typeface.css?v=1.02"></link>
 </head>
 <body>
 
-	<div class="prism-wrapper">
+	<div class="prism-wrapper prism-error">
 	
-		<div>
-			<h1 th:text="${prismError.code}">999</h1>
-			<p th:text="${prismError.message}">>Error message</p>
+		<img src="/resources/img/prism-orange-rgb.png" alt="prism logo" class="prism-logo"/>
+	
+		<div class="prism">
+			<h1 class="prism-hdr">
+				<span class="prism-hdr-title" th:text="${prismError.code}">999</span>	
+			</h1>
+			<h2 class="prism-hdr-sub" th:text="${prismError.message}">
+				Error message
+			</h2>
 		</div>
 		
 	</div>	
