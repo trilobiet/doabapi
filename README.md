@@ -2,7 +2,7 @@
 
 Use this widget on your web pages to show [PRISM Peer Review Information](https://www.doabooks.org/en/article/prism) for publishers and titles.
 
-A [CC BY 4.0 license](https://github.com/trilobiet/prism-widget/blob/main/LICENSE) applies to this widget.
+A [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/) applies to this widget.
 
 -----
 
