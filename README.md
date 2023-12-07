@@ -2,6 +2,8 @@
 
 Use this widget on your web pages to show [PRISM Peer Review Information](https://www.doabooks.org/en/article/prism) for publishers and titles.
 
+A [CC BY 4.0 license](https://github.com/trilobiet/prism-widget/blob/main/LICENSE) applies to this widget.
+
 -----
 
 ### TLDR
@@ -553,5 +555,14 @@ prismTitle({
 ````
 Peer Review data for title with isbn `9780472036165` is rendered inline in the element with id `mySelector` 
 
+-----
+#License
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence"
+style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br /><span
+xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Prism widget for Directory of Open Access Books</span> by <span
+xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Trilobiet for OAPEN Foundation
+</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+Creative Commons Attribution 4.0 International License</a>.
 
     
