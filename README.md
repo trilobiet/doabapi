@@ -16,6 +16,7 @@ If you just want to implement the widget on your website, head over to [Widget i
 * [Title Data](#title-data)   
 * [Widget implementation in HTML](#widget-implementation-in-html)    
 * [Function reference for prism-widget.js](#function-reference-for-prism-widgetjs)
+* [License](#license)
 
 
 -----
